@@ -1,4 +1,4 @@
-FROM golang  
+FROM ubuntu  
 WORKDIR /work
 ADD . .
 RUN go test ./...
