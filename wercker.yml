@@ -21,10 +21,10 @@ build:
         image-name: my-new-image
         username: $USERNAME # Docker Hub username. When using CLI, set using "export X_USERNAME=<username>"  
         password: $PASSWORD # Docker Hub password. When using CLI, set using "export X_PASSWORD=<password>" 
-        repository: docker.io/$USERNAME/docker-build-golang
+        repository: docker.io/$USERNAME/docker-build-ubuntu
         tag: latest    
     - internal/docker-run:
-        image: docker.io/$USERNAME/docker-build-golang
+        image: docker.io/$USERNAME/docker-build-ubuntu
         name: myTestContainer2
     - script:
         name: test ping
