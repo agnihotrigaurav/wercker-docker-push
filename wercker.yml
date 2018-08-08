@@ -4,5 +4,5 @@ build:
     - internal/docker-push: 
         username: $USERNAME # Docker Hub username. When using CLI, set using "export X_USERNAME=<username>"  
         password: $PASSWORD # Docker Hub password. When using CLI, set using "export X_PASSWORD=<password>" 
-        repository: $USERNAME/docker-build-ubuntu
+        repository: docker.io/$USERNAME/docker-build-ubuntu
         tag: latest
