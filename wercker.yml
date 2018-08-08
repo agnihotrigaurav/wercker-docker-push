@@ -21,8 +21,7 @@ build:
         image-name: my-new-image
         username: $USERNAME # Docker Hub username. When using CLI, set using "export X_USERNAME=<username>"  
         password: $PASSWORD # Docker Hub password. When using CLI, set using "export X_PASSWORD=<password>" 
-        repository: iad.ocir.io/$USERNAME/docker-build-ubuntu
-        registry: https://iad.ocir.io/v2/
+        repository: docker.io/$USERNAME/docker-build-ubuntu
         tag: latest    
     - internal/docker-run:
         image: docker.io/$USERNAME/docker-build-golang
