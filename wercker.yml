@@ -10,7 +10,7 @@ build:
         nocache: false # ensures RUN steps in Dockerfile are always run
         registry-auth-config: |
           {
-            "docker.example.com": {
+            "https://index.docker.io/v1/": {
               "username": "$USERNAME",
               "password": "$PASSWORD"
             }
