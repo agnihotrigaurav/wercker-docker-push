@@ -8,6 +8,13 @@ build:
         labels: "Label1=value1 'Three word key'=value2 Label3='Three word value'"
         extrahosts: "somehost:192.168.0.1 anotherhost:192.168.0.2"
         nocache: false # ensures RUN steps in Dockerfile are always run
+        registry-auth-config: |
+          {
+            "docker.example.com": {
+              "username": "$USERNAME",
+              "password": "$PASSWORD"
+            }
+          }
     - internal/docker-push:
         image-name: my-new-image
         username: $USERNAME # Docker Hub username. When using CLI, set using "export X_USERNAME=<username>"
